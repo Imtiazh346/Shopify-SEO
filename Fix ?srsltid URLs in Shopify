@@ -1,0 +1,13 @@
+Code1: 
+<link rel="canonical" href="{{ canonical_url }}">
+
+Code 2:
+{% if request.query_string contains 'srsltid' %}
+  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+Code 3:
+<script>
+if (window.location.search.includes("srsltid")) {
+  const cleanUrl = window.location.origin + window.location.pathname;
+  window.history.replaceState({}, document.title, cleanUrl);}</script>
